@@ -5,6 +5,10 @@
   background-color: var(--color-bg-page);
   box-sizing: border-box;
 }
+body{
+  background-color: var(--color-bg-page);
+
+}
 
 .success-message {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
