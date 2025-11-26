@@ -1,0 +1,146 @@
+:root {
+  color-scheme: dark;
+
+  --color-bg-page: #272822;
+  --color-bg-body: #242424;
+  --color-text-primary: #f8f8f2;
+  --color-text-muted: #888888;
+
+  --color-accent-primary: #a6e22e;
+  --color-accent-secondary: #f92672;
+  --color-accent-tertiary: #9effff;
+  --color-accent-quaternary: #fd971f;
+  --color-link: #646cff;
+  --color-link-hover: #535bf2;
+
+  --color-button-bg: #1a1a1a;
+  --color-button-border: #646cff;
+  --color-button-surface: transparent;
+
+  --color-success-text: #a6e22e;
+  --color-success-bg: rgba(166, 226, 46, 0.1);
+  --color-success-border: #a6e22e;
+
+  --color-tab-text: rgba(253, 151, 31, 0.6);
+  --color-tab-text-hover: rgba(253, 151, 31, 1);
+  --color-tab-text-active: rgba(253, 151, 31, 1);
+
+  --color-input-bg: transparent;
+  --color-input-border: #a6e22e;
+
+  --color-card-border: #a6e22e;
+  --color-card-bg: transparent;
+  --color-card-hover-bg: rgba(158, 255, 255, 0.3);
+  --color-card-surface: rgba(158, 255, 255, 0.08);
+  --color-card-shadow: rgba(0, 0, 0, 0.25);
+
+  --color-chip-bg: rgba(255, 255, 255, 0.08);
+  --color-chip-border: rgba(166, 226, 46, 0.6);
+  --color-chip-text: #a6e22e;
+
+  --color-error: #ff6e6e;
+  --color-repo-updated: #9da5b4;
+
+  --color-email-text: #fd971f;
+  --color-description-text: #9effff;
+
+  --color-countdown-heading: #fd971f;
+  --color-countdown-border: rgba(166, 226, 46, 0.5);
+  --color-countdown-bg: rgba(166, 226, 46, 0.05);
+  --color-countdown-value: #f92672;
+  --color-countdown-label: #f8f8f2;
+  --color-countdown-finished: #f8f8f2;
+  --color-countdown-unit-bg: rgba(255, 255, 255, 0.05);
+
+  --color-circle-bg: #f92672;
+  --color-circle-border: #f92672;
+  --color-circle-shadow: rgba(0, 0, 0, 0.1);
+  --color-circle-shadow-hover: rgba(0, 0, 0, 0.15);
+
+  --color-game-sky: #1e1f24;
+  --color-game-ground: #3a2a17;
+  --color-game-horse: #c39a5d;
+  --color-game-rider: #111111;
+  --color-game-robe: #ffffff;
+  --color-game-obstacle: #a0522d;
+  --color-game-sun: #f5a623;
+  --color-game-panel-bg: rgba(0, 0, 0, 0.35);
+  --color-game-panel-border: rgba(255, 255, 255, 0.15);
+  --color-game-panel-text: #f8f8f2;
+  --color-game-cta-bg: rgba(166, 226, 46, 0.15);
+  --color-game-cta-text: #a6e22e;
+}
+
+:root[data-theme='molokai-white-mod'] {
+  color-scheme: light;
+
+  --color-bg-page: #ffffff;
+  --color-bg-body: #f7f7f7;
+  --color-text-primary: #1f1f1f;
+  --color-text-muted: #4a4a4a;
+
+  --color-accent-primary: #7fb23a;
+  --color-accent-secondary: #c0395a;
+  --color-accent-tertiary: #1d6c7a;
+  --color-accent-quaternary: #d46a00;
+  --color-link: #1445c2;
+  --color-link-hover: #0f2f7a;
+
+  --color-button-bg: #ffffff;
+  --color-button-border: #7fb23a;
+  --color-button-surface: rgba(0, 0, 0, 0.02);
+
+  --color-success-text: #3d7d0c;
+  --color-success-bg: rgba(127, 178, 58, 0.15);
+  --color-success-border: #7fb23a;
+
+  --color-tab-text: rgba(212, 106, 0, 0.8);
+  --color-tab-text-hover: #d46a00;
+  --color-tab-text-active: #b34000;
+
+  --color-input-bg: rgba(0, 0, 0, 0.02);
+  --color-input-border: #7fb23a;
+
+  --color-card-border: rgba(31, 31, 31, 0.15);
+  --color-card-bg: rgba(0, 0, 0, 0.02);
+  --color-card-hover-bg: rgba(0, 0, 0, 0.08);
+  --color-card-surface: rgba(0, 0, 0, 0.02);
+  --color-card-shadow: rgba(0, 0, 0, 0.15);
+
+  --color-chip-bg: rgba(127, 178, 58, 0.12);
+  --color-chip-border: rgba(127, 178, 58, 0.4);
+  --color-chip-text: #4d7f1c;
+
+  --color-error: #d64541;
+  --color-repo-updated: #5f5f5f;
+
+  --color-email-text: #b04800;
+  --color-description-text: #1f1f1f;
+
+  --color-countdown-heading: #c05d00;
+  --color-countdown-border: rgba(0, 0, 0, 0.08);
+  --color-countdown-bg: rgba(0, 0, 0, 0.03);
+  --color-countdown-value: #c0395a;
+  --color-countdown-label: #1f1f1f;
+  --color-countdown-finished: #1f1f1f;
+  --color-countdown-unit-bg: rgba(0, 0, 0, 0.02);
+
+  --color-circle-bg: #c0395a;
+  --color-circle-border: #c0395a;
+  --color-circle-shadow: rgba(0, 0, 0, 0.08);
+  --color-circle-shadow-hover: rgba(0, 0, 0, 0.18);
+
+  --color-game-sky: #f4f6fb;
+  --color-game-ground: #e0d3bd;
+  --color-game-horse: #8b5e2b;
+  --color-game-rider: #1f1f1f;
+  --color-game-robe: #ffffff;
+  --color-game-obstacle: #9c6b32;
+  --color-game-sun: #f5a623;
+  --color-game-panel-bg: rgba(255, 255, 255, 0.8);
+  --color-game-panel-border: rgba(0, 0, 0, 0.1);
+  --color-game-panel-text: #1f1f1f;
+  --color-game-cta-bg: rgba(0, 0, 0, 0.05);
+  --color-game-cta-text: #b04800;
+}
+

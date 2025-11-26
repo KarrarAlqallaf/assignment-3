@@ -4,15 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F92672;
-  border: 3px solid #F92672;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-circle-bg);
+  border: 3px solid var(--color-circle-border);
+  box-shadow: 0 4px 8px var(--color-circle-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .circle-container:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px var(--color-circle-shadow-hover);
 }
 
 .circle-image {

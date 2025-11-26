@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Circle from './Circle'
 import Row from './Row'
 import Column from './Column'
@@ -16,6 +14,12 @@ const App = () => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem('preferredLanguage')
     return savedLanguage || 'Eng'
+  })
+
+  // Initialize theme from localStorage, default to Molokai dark
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('preferredTheme')
+    return savedTheme || 'molokai-dark'
   })
 
   // State for form fields
@@ -40,6 +44,25 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem('preferredLanguage', language)
   }, [language])
+
+  // Apply and persist theme preference
+  useEffect(() => {
+    const root = document.documentElement
+
+    if (theme === 'molokai-dark') {
+      root.removeAttribute('data-theme')
+    } else {
+      root.setAttribute('data-theme', theme)
+    }
+
+    localStorage.setItem('preferredTheme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prev) =>
+      prev === 'molokai-dark' ? 'molokai-white-mod' : 'molokai-dark'
+    )
+  }
 
   // Handle input changes
   const handleInputChange = (e) => {
@@ -107,6 +130,9 @@ const App = () => {
     messagePlaceholder: language === 'Eng' ? 'your message' : 'رسالتك',
     submitButton: language === 'Eng' ? 'Submit' : 'إرسال',
     successMessage: language === 'Eng' ? 'Message sent successfully!' : 'تم إرسال الرسالة بنجاح!',
+    themeBTN_TextDark: language === 'Eng' ? 'Dark' : 'داكن',
+    themeBTN_TextWhite: language === 'Eng' ? 'White' : 'مضيء'
+
   } 
 
   return (
@@ -114,14 +140,20 @@ const App = () => {
     <div className = "appContainer" dir={language === 'Arb' ? 'rtl' : 'ltr'}> 
       
       {/* header section */}
-      <Row justify="flex-start" padding="50px 0 0 0" dir="ltr"> 
-      <button
-      className={`languageBTN ${language === 'Eng' ? 'EngActive' : 'ArbActive'}`}
-        onClick={toggleLanguage}
-      >
-        {/* Button displays the language it switches *to* */}
-        {language === 'Eng' ? 'عربي' : 'Engl'}
-      </button>
+      <Row justify="flex-start" padding="50px 0 0 0" dir="ltr" gap='10px'> 
+        <button
+          className={`languageBTN ${language === 'Eng' ? 'EngActive' : 'ArbActive'}`}
+          onClick={toggleLanguage}
+        >
+          {/* Button displays the language it switches *to* */}
+          {language === 'Eng' ? 'عربي' : 'Engl'}
+        </button>
+        <button
+          className="themeBTN"
+          onClick={toggleTheme}
+        >
+          {theme === 'molokai-dark' ? text.themeBTN_TextWhite : text.themeBTN_TextDark}
+        </button>
       </Row>
 
      
@@ -144,7 +176,10 @@ const App = () => {
         />
       </Row>
 
+      <Row>
       <Countdown language={language} />
+      </Row>
+
       
       {/* info section (Tabs) */}
       <Row>

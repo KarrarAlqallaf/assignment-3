@@ -9,7 +9,7 @@
 .repo-heading {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 24px;
-  color: #a6e22e;
+  color: var(--color-accent-primary);
   margin: 0;
 }
 
@@ -17,11 +17,11 @@
 .repo-error {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   margin: 0;
-  color: #f8f8f2;
+  color: var(--color-text-primary);
 }
 
 .repo-error {
-  color: #ff6e6e;
+  color: var(--color-error);
 }
 
 .repo-list {
@@ -34,7 +34,7 @@
 }
 
 .repo-card {
-  border: 1px solid #a6e22e;
+  border: 1px solid var(--color-card-border);
   border-radius: 14px;
   padding: 20px;
   display: flex;
@@ -46,14 +46,14 @@
 
 .repo-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  background: rgba(158, 255, 255, 0.08);
+  box-shadow: 0 10px 20px var(--color-card-shadow);
+  background: var(--color-card-hover-bg);
 }
 
 .repo-name {
   font-size: 20px;
   font-weight: 600;
-  color: #f92672;
+  color: var(--color-accent-secondary);
   text-decoration: none;
 }
 
@@ -63,7 +63,7 @@
 
 .repo-description {
   margin: 0;
-  color: #f8f8f2;
+  color: var(--color-text-primary);
   font-size: 16px;
   line-height: 1.4;
 }
@@ -79,14 +79,14 @@
   font-size: 14px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(166, 226, 46, 0.6);
-  color: #a6e22e;
+  background: var(--color-chip-bg);
+  border: 1px solid var(--color-chip-border);
+  color: var(--color-chip-text);
 }
 
 .repo-updated {
   margin-left: auto;
   font-size: 14px;
-  color: #9da5b4;
+  color: var(--color-repo-updated);
 }
 

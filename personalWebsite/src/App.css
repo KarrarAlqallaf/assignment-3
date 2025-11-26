@@ -2,7 +2,7 @@
   width: 100vw;
   height: fit-content;
   text-align: center;
-  background-color: #272822;
+  background-color: var(--color-bg-page);
   box-sizing: border-box;
 }
 
@@ -10,12 +10,12 @@
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 24px;
   font-weight: 600;
-  color: #A6E22E;
+  color: var(--color-success-text);
   margin: 0;
   padding: 15px;
-  background-color: rgba(166, 226, 46, 0.1);
+  background-color: var(--color-success-bg);
   border-radius: 10px;
-  border: 2px solid #A6E22E;
+  border: 2px solid var(--color-success-border);
 }
 
 
@@ -39,14 +39,14 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--color-text-muted);
 }
 
 .header-title {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 80px;
   font-weight: 600;
-  color: #F92672;
+  color: var(--color-accent-secondary);
   margin: 0;
 }
 
@@ -54,7 +54,7 @@
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 32px;
   font-weight: 400;
-  color: #9EFFFF;
+  color: var(--color-description-text);
   margin: 0;
   text-align: left;
 }
@@ -63,7 +63,7 @@
 .infoBTNs{
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 36px;
-  color: rgba(253, 151, 31, 0.6);
+  color: var(--color-tab-text);
   background-color: transparent;
   border: 2px solid transparent;
   padding: 10px 20px;
@@ -71,7 +71,7 @@
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 .infoBTNs:hover{
-  color: rgba(253, 151, 31, 1);
+  color: var(--color-tab-text-hover);
   border: 2px solid transparent;}
 
 /* .infoBTNs.active:hover{
@@ -81,9 +81,9 @@
   transform: none;
 } */
 .infoBTNs.active{
-  border: 2px solid #A6E22E;
+  border: 2px solid var(--color-accent-primary);
   border-radius: 15px;
-  color: rgba(253, 151, 31, 1);
+  color: var(--color-tab-text-active);
 
 }
 
@@ -92,7 +92,7 @@
   font-size: 32px;
   height: 392px;
   font-weight: 600;
-  color: #9EFFFF;
+  color: var(--color-description-text);
   margin: 0;
 }
 
@@ -100,24 +100,24 @@
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 36px;
   font-weight: 600;
-  color: #9EFFFF;
+  color: var(--color-description-text);
   margin: 0;
 }
 .email{
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 24px;
   font-weight: 600;
-  color: #FD971F;
+  color: var(--color-email-text);
   margin: 0;
 }
 
 textarea{
     padding: 15px;
     border-radius: 15px;
-    border: 2px solid #A6E22E;
+    border: 2px solid var(--color-input-border);
     width: 450px;
     height: 72px;
-    background-color: transparent;
+    background-color: var(--color-input-bg);
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 24px;
     resize: vertical;
@@ -125,11 +125,12 @@ textarea{
     outline: none;
 }
 textarea:focus{
-  border: 2px solid #A6E22E
+  border: 2px solid var(--color-input-border);
 }
 .header-description{
   max-width: 736px;
 }
+.themeBTN,
 .languageBTN{
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 36px;
@@ -137,13 +138,14 @@ textarea:focus{
   padding: 10px 20px;
   border-radius: 15px;
   transition: color 0.3s ease, border-color 0.3s ease;
-  border: 2px solid #A6E22E;
-  color: rgba(253, 151, 31, 1);
+  border: 2px solid var(--color-accent-primary);
+  color: var(--color-tab-text-active);
   /* position: fixed; */
   top: 20px;
   left: 20px;
   z-index: 1000;
 }
+
 .appContainer{
   max-width: 1200px; /* The maximum width of your content */
   margin: 0 auto;    /* This centers the container on the page */

@@ -5,8 +5,8 @@
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
-  padding: 15px;
-  margin: 15px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .row > * {
