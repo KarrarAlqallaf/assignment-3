@@ -207,6 +207,7 @@ const App = () => {
       {/* Content sections - only show active tab */}
       {/* (ProjectContainer titles should be updated inside ProjectContainer component 
           if it needs to be multilingual) */}
+      <div style={{ height: '400px' }}>
       {activeTab === 'projects' && (
         <>
           <GitHubRepos language={language} />
@@ -226,6 +227,8 @@ const App = () => {
           <p className='shP'>{text.hobbiesContent}</p>
         </Row>
       )}
+      </div>
+
 
       {/* contact me section */}
       <Row padding = "15px 0" align="flex-end" gap='25px'>
