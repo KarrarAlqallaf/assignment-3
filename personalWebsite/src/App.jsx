@@ -7,6 +7,7 @@ import Column from './Column'
 import './App.css'
 import ProjectContainer from './projContainer'
 import GitHubRepos from './GitHubRepos'
+import Countdown from './Countdown'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('projects')
@@ -122,6 +123,8 @@ const App = () => {
         {language === 'Eng' ? 'عربي' : 'Engl'}
       </button>
       </Row>
+
+     
      
 
       {/* --- Header Content Translation --- */}
@@ -140,6 +143,8 @@ const App = () => {
           alt="Karrar Alqallaf profile picture"
         />
       </Row>
+
+      <Countdown language={language} />
       
       {/* info section (Tabs) */}
       <Row>
