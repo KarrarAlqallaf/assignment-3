@@ -9,7 +9,7 @@ import Countdown from './Countdown'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('projects')
-  
+
   // Initialize language from localStorage, default to 'Eng' if not found
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem('preferredLanguage')
@@ -34,8 +34,8 @@ const App = () => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
-  } 
-  
+  }
+
   const toggleLanguage = () => {
     setLanguage(prevLanguage => (prevLanguage === 'Eng' ? 'Arb' : 'Eng'));
   };
@@ -83,16 +83,16 @@ const App = () => {
   const handleSubmit = () => {
     // Check if email is valid
     if (!isValidEmail(formData.email)) {
-      alert(language === 'Eng' 
-        ? 'Please enter a valid email address' 
+      alert(language === 'Eng'
+        ? 'Please enter a valid email address'
         : 'الرجاء إدخال عنوان بريد إلكتروني صحيح')
       return
     }
 
     // Check if all fields are filled
     if (!formData.name || !formData.email || !formData.message) {
-      alert(language === 'Eng' 
-        ? 'Please fill in all fields' 
+      alert(language === 'Eng'
+        ? 'Please fill in all fields'
         : 'الرجاء ملء جميع الحقول')
       return
     }
@@ -116,7 +116,7 @@ const App = () => {
   // Helper object for simple content translation
   const text = {
     headerTitle: language === 'Eng' ? 'Karrar Alqallaf' : 'كرار القلاف',
-    headerDescription: language === 'Eng' 
+    headerDescription: language === 'Eng'
       ? 'King Fahd University of Petroleum and Minerals computer science student. Saudi born at 2004 in Qatif.'
       : 'طالب علوم حاسب بجامعة الملك فهد للبترول والمعادن. سعودي مواليد 2004 في القطيف.',
     projectsTab: language === 'Eng' ? 'Projects' : 'المشاريع',
@@ -133,14 +133,14 @@ const App = () => {
     themeBTN_TextDark: language === 'Eng' ? 'Dark' : 'داكن',
     themeBTN_TextWhite: language === 'Eng' ? 'White' : 'مضيء'
 
-  } 
+  }
 
   return (
     // Set text direction based on language
-    <div className = "appContainer" dir={language === 'Arb' ? 'rtl' : 'ltr'}> 
-      
+    <div className="appContainer" dir={language === 'Arb' ? 'rtl' : 'ltr'}>
+
       {/* header section */}
-      <Row justify="flex-start" padding="50px 0 0 0" dir="ltr" gap='10px'> 
+      <Row justify="flex-start" padding="50px 0 0 0" dir="ltr" gap='10px'>
         <button
           className={`languageBTN ${language === 'Eng' ? 'EngActive' : 'ArbActive'}`}
           onClick={toggleLanguage}
@@ -156,8 +156,8 @@ const App = () => {
         </button>
       </Row>
 
-     
-     
+
+
 
       {/* --- Header Content Translation --- */}
       <Row>
@@ -165,38 +165,38 @@ const App = () => {
           <h1 className='header-title'>
             {text.headerTitle}
           </h1>
-            <p className='header-description'>
-        
+          <p className='header-description'>
+
             {text.headerDescription}
-            </p>
+          </p>
         </Column>
-        <Circle 
-          imageSrc="/src/assets/Images/My circle image.png" 
+        <Circle
+          imageSrc="/src/assets/Images/My circle image.png"
           alt="Karrar Alqallaf profile picture"
         />
       </Row>
 
       <Row>
-      <Countdown language={language} />
+        <Countdown language={language} />
       </Row>
 
-      
+
       {/* info section (Tabs) */}
       <Row>
         {/* --- Tabs Translation --- */}
-        <button 
+        <button
           className={`infoBTNs ${activeTab === 'projects' ? 'active' : ''}`}
           onClick={() => handleTabClick('projects')}
         >
           {text.projectsTab}
         </button>
-        <button 
+        <button
           className={`infoBTNs ${activeTab === 'skills' ? 'active' : ''}`}
           onClick={() => handleTabClick('skills')}
         >
           {text.skillsTab}
         </button>
-        <button 
+        <button
           className={`infoBTNs ${activeTab === 'hobbies' ? 'active' : ''}`}
           onClick={() => handleTabClick('hobbies')}
         >
@@ -207,59 +207,62 @@ const App = () => {
       {/* Content sections - only show active tab */}
       {/* (ProjectContainer titles should be updated inside ProjectContainer component 
           if it needs to be multilingual) */}
-      <div style={{ height: '400px' }}>
-      {activeTab === 'projects' && (
-        <>
-          <GitHubRepos language={language} />
-        </>
-      )}
+      <div style={{
+        height: '400px',
+        overflow: 'auto'
+      }}>
+        {activeTab === 'projects' && (
+          <>
+            <GitHubRepos language={language} />
+          </>
+        )}
 
-      {activeTab === 'skills' && (
-        <Row>
-          {/* --- Skills Content Translation --- */}
-          <p className='shP'>{text.skillsContent}</p>
-        </Row>
-      )}
+        {activeTab === 'skills' && (
+          <Row>
+            {/* --- Skills Content Translation --- */}
+            <p className='shP'>{text.skillsContent}</p>
+          </Row>
+        )}
 
-      {activeTab === 'hobbies' && (
-        <Row>
-          {/* --- Hobbies Content Translation --- */}
-          <p className='shP'>{text.hobbiesContent}</p>
-        </Row>
-      )}
+        {activeTab === 'hobbies' && (
+          <Row>
+            {/* --- Hobbies Content Translation --- */}
+            <p className='shP'>{text.hobbiesContent}</p>
+          </Row>
+        )}
       </div>
 
 
       {/* contact me section */}
-      <Row padding = "15px 0" align="flex-end" gap='25px'>
+      <Row padding="15px 0" align="flex-end" gap='25px'>
         {/* --- Contact Title Translation --- */}
-        <h2 className = 'contact'>{text.contactTitle}</h2>
+        <h2 className='contact'>{text.contactTitle}</h2>
         <p className='email'>s202267840@kfupm.edu.sa</p>
       </Row>
-       <Row gap='25px' padding = "15px 0">   
+      <Row gap='25px' padding="15px 0">
         {/* --- Contact Form Placeholder Translation --- */}
-        <textarea 
-          placeholder={text.namePlaceholder} 
+        <textarea
+          placeholder={text.namePlaceholder}
           id="name"
           value={formData.name}
           onChange={handleInputChange}
         ></textarea>
-        <textarea 
-          placeholder={text.emailPlaceholder} 
+        <textarea
+          placeholder={text.emailPlaceholder}
           id="email"
           value={formData.email}
           onChange={handleInputChange}
         ></textarea>
-         </Row>
-        <Row padding = "15px 0">
-        <textarea 
-          placeholder={text.messagePlaceholder} 
-          id="message" 
-          style={{width: "941px", height: "268px"}}
+      </Row>
+      <Row padding="15px 0">
+        <textarea
+          placeholder={text.messagePlaceholder}
+          id="message"
+          style={{ width: "941px", height: "268px" }}
           value={formData.message}
           onChange={handleInputChange}
         ></textarea>
-        </Row>
+      </Row>
 
       {/* Success Message */}
       {showSuccessMessage && (
@@ -269,7 +272,7 @@ const App = () => {
       )}
 
       <button className='infoBTNs' onClick={handleSubmit}>{text.submitButton}</button>
-      
+
     </div>
   )
 }
