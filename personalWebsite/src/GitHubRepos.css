@@ -1,0 +1,92 @@
+.repo-section {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.repo-heading {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 24px;
+  color: #a6e22e;
+  margin: 0;
+}
+
+.repo-info,
+.repo-error {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  margin: 0;
+  color: #f8f8f2;
+}
+
+.repo-error {
+  color: #ff6e6e;
+}
+
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.repo-card {
+  border: 1px solid #a6e22e;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background: rgba(158, 255, 255, 0.08);
+}
+
+.repo-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f92672;
+  text-decoration: none;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-description {
+  margin: 0;
+  color: #f8f8f2;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.repo-chip {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(166, 226, 46, 0.6);
+  color: #a6e22e;
+}
+
+.repo-updated {
+  margin-left: auto;
+  font-size: 14px;
+  color: #9da5b4;
+}
+

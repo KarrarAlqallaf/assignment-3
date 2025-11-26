@@ -6,6 +6,7 @@ import Row from './Row'
 import Column from './Column'
 import './App.css'
 import ProjectContainer from './projContainer'
+import GitHubRepos from './GitHubRepos'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('projects')
@@ -167,18 +168,9 @@ const App = () => {
       {/* (ProjectContainer titles should be updated inside ProjectContainer component 
           if it needs to be multilingual) */}
       {activeTab === 'projects' && (
-        <Row>
-          <ProjectContainer 
-            title="Collapsed Tabs Titles" // Assuming titles are static/English
-            imageSrc="/src/assets/Images/project1 img.png"
-            url="https://github.com/KarrarAlqallaf/Collapsed-Tabs-Titles-ZenMod"
-          />
-          <ProjectContainer 
-            title="Jadwal GYM" // Assuming titles are static/English
-            imageSrc="/src/assets/Images/Jadwal Page Karrar.png"
-            url="https://www.figma.com/design/kcLsyUcdHoMwOS8iJ0dojI/SWE-web-project?node-id=0-1&t=65LVjJyRnZVvPRfZ-1"
-          />
-        </Row>
+        <>
+          <GitHubRepos language={language} />
+        </>
       )}
 
       {activeTab === 'skills' && (
